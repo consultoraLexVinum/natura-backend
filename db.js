@@ -1,17 +1,18 @@
 const mysql = require('mysql2');
 
-const conexion = mysql.createConnection({
-  host: 'localhost',
-  user: 'c2791005_natura',
-  password: '11VUlikego',
-  database: 'c2791005_natura'
-});
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Ocurrio un error al conectarse al servidor mysql');
-	mysql_select_db($dbname);
-
-conexion.connect((err) => {
-  if (err) throw err;
-  console.log('Conectado a la base de datos MySQL');
+const connection = mysql.createConnection({
+  host: 'localhost',     // Reemplazá con el host que te dio DonWeb
+  user: 'c2791005_natura',          // Reemplazá con tu usuario de DonWeb
+  password: '11VUlikego',   // Reemplazá con la contraseña de DonWeb
+  database: 'c2791005_natura'    // Reemplazá con el nombre de la base
 });
 
-module.exports = conexion;
+connection.connect((err) => {
+  if (err) {
+    console.error('Error al conectarse a MySQL:', err);
+    return;
+  }
+  console.log('Conectado a MySQL correctamente');
+});
+
+module.exports = connection;
