@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-  host: 'localhost',     // Reemplazá con el host que te dio DonWeb
-  user: 'c2791005_natura',          // Reemplazá con tu usuario de DonWeb
-  password: '11VUlikego',   // Reemplazá con la contraseña de DonWeb
-  database: 'c2791005_natura'    // Reemplazá con el nombre de la base
+  host: 'c279.ferozo.com',       // ✅ Este es el host correcto
+  user: 'c2791005_natura',
+  password: '11VUlikego',
+  database: 'c2791005_natura'
 });
 
 connection.connect((err) => {
@@ -12,7 +12,7 @@ connection.connect((err) => {
     console.error('Error al conectarse a MySQL:', err);
     return;
   }
-  console.log('Conectado a MySQL correctamente');
+  console.log('Conexión exitosa a MySQL');
 });
 
 module.exports = connection;
