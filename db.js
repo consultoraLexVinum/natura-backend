@@ -6,6 +6,8 @@ const conexion = mysql.createConnection({
   password: '11VUlikego',
   database: 'c2791005_natura'
 });
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Ocurrio un error al conectarse al servidor mysql');
+	mysql_select_db($dbname);
 
 conexion.connect((err) => {
   if (err) throw err;
